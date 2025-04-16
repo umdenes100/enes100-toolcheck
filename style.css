@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Interstate';
+    font-weight: normal;
+    font-style: normal;
+    /*noinspection CssUnknownTarget*/
+    src: local('Interstate'), url("/Interstate-Regular.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Interstate';
+    font-style: normal;
+    font-weight: bold;
+    /*noinspection CssUnknownTarget*/
+    src: local('Interstate'), url("/Interstate-Bold.otf") format('opentype');
+}
+
+body {
+    font-family: "Interstate", sans-serif;
+    background-color: #121B21;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+select,
+button {
+    font-size: 16px;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 4px;
+    padding: 4px;
+    height: 30px;
+}
+
+:root {
+    touch-action: pan-x pan-y;
+    color-scheme: dark;
+    text-rendering: optimizeLegibility;
+}
+
+#home {
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 10vh;
+}
+
+#overview,
+#pcs,
+#sw,
+#gs,
+#mt,
+#clamps,
+#hms,
+#et,
+#st,
+#ct,
+#ppe {
+    display: flex;
+    width: 95vw;
+    height: 90vh;
+}
+
+svg {
+    width: 100vw;
+    border: .5vh solid white;
+}
+
+.buttonBox {
+    display: flex;
+}
+
+.buttonBoxHome {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+
+.buttonBoxHome button {
+    margin: 0 8px;
+}
+
+@media (max-width: 700px) {
+
+    /* collapsed menu */
+    #overview,
+    #pcs,
+    #sw,
+    #gs,
+    #mt,
+    #clamps,
+    #hms,
+    #et,
+    #st,
+    #ct,
+    #ppe {
+        flex-direction: column;
+    }
+
+    button {
+        margin: 0px 8px 8px 0px;
+    }
+
+    .buttonBox {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 700px) {
+
+    /* open menu */
+    #overview,
+    #pcs,
+    #sw,
+    #gs,
+    #mt,
+    #clamps,
+    #hms,
+    #et,
+    #st,
+    #ct,
+    #ppe {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    button {
+        margin: 4px 8px 4px 0px;
+    }
+
+    .buttonBox {
+        flex-direction: column;
+        width: 86px;
+    }
+}
