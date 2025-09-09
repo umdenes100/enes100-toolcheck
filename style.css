@@ -66,8 +66,8 @@ button {
 }
 
 svg {
-    width: 100vw;
     border: .5vh solid white;
+    width: 95vw;
 }
 
 .buttonBox {
@@ -84,7 +84,7 @@ svg {
     margin: 0 8px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
 
     /* collapsed menu */
     #overview,
@@ -99,6 +99,7 @@ svg {
     #ct,
     #ppe {
         flex-direction: column;
+        align-items: center;
     }
 
     button {
@@ -110,7 +111,7 @@ svg {
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 750px) {
 
     /* open menu */
     #overview,
