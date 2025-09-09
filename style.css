@@ -63,6 +63,7 @@ button {
     display: flex;
     width: 95vw;
     height: 90vh;
+    overflow: hidden;
 }
 
 svg {
