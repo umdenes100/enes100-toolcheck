@@ -138,3 +138,10 @@ svg {
         width: 86px;
     }
 }
+
+@media (min-width:700px) and (orientation:landscape) {
+    svg {
+        height: 95dvh;
+        width: fit-content;
+    }
+}
