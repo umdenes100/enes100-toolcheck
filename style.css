@@ -66,12 +66,12 @@ button {
 }
 
 svg {
-    width: 100vw;
     border: .5vh solid white;
 }
 
 .buttonBox {
     display: flex;
+    justify-content: center;
 }
 
 .buttonBoxHome {
@@ -84,7 +84,7 @@ svg {
     margin: 0 8px;
 }
 
-@media (max-width: 700px) {
+@media (orientation: portrait) {
 
     /* collapsed menu */
     #overview,
@@ -100,19 +100,11 @@ svg {
     #ppe {
         flex-direction: column;
     }
-
-    button {
-        margin: 0px 8px 8px 0px;
-    }
-
-    .buttonBox {
-        flex-direction: row;
-    }
 }
 
-@media (min-width: 700px) {
+@media (orientation: landscape) {
 
-    /* open menu */
+    /* collapsed menu */
     #overview,
     #pcs,
     #sw,
@@ -125,8 +117,25 @@ svg {
     #ct,
     #ppe {
         flex-direction: row;
-        align-items: center;
     }
+}
+
+@media (max-width: 750px) {
+
+    button {
+        margin: 0px 8px 8px 0px;
+    }
+
+    .buttonBox {
+        flex-direction: row;
+    }
+
+    svg {
+        height: 95vh;
+    }
+}
+
+@media (min-width: 750px) {
 
     button {
         margin: 4px 8px 4px 0px;
@@ -135,5 +144,9 @@ svg {
     .buttonBox {
         flex-direction: column;
         width: 86px;
+    }
+
+    svg {
+        width: 95vw;
     }
 }
