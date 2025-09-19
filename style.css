@@ -64,6 +64,8 @@ button {
     width: 95vw;
     height: 90vh;
     overflow: hidden;
+    flex-direction: column;
+    align-items: center;
 }
 
 svg {
@@ -85,22 +87,12 @@ svg {
     margin: 0 8px;
 }
 
-@media (max-width: 750px) {
 
-    /* collapsed menu */
-    #overview,
-    #pcs,
-    #sw,
-    #gs,
-    #mt,
-    #clamps,
-    #hms,
-    #et,
-    #st,
-    #ct,
-    #ppe {
-        flex-direction: column;
-        align-items: center;
+/* horizontal phone */
+@media (max-width: 800px) and (orientation:landscape) { 
+    svg {
+        height: 80dvh;
+        width: auto;
     }
 
     button {
@@ -112,36 +104,49 @@ svg {
     }
 }
 
-@media (min-width: 750px) {
-
-    /* open menu */
-    #overview,
-    #pcs,
-    #sw,
-    #gs,
-    #mt,
-    #clamps,
-    #hms,
-    #et,
-    #st,
-    #ct,
-    #ppe {
-        flex-direction: row;
-        align-items: center;
+/* vertical phone */
+@media (max-width: 500px) and (orientation:portrait) { 
+    svg {
+        width: 90vw;
     }
 
     button {
-        margin: 4px 8px 4px 0px;
+        margin: 0px 8px 8px 0px;
     }
 
     .buttonBox {
         flex-direction: column;
-        width: 86px;
     }
 }
 
-@media (min-width:700px) and (orientation:landscape) {
+/* horizontal tablet */
+@media (min-width: 800px) and (orientation:landscape) { 
     svg {
-        height: fit-content;
+        height: 85dvh;
+        width: auto;
+    }
+
+    button {
+        margin: 0px 8px 8px 0px;
+    }
+
+    .buttonBox {
+        flex-direction: row;
+    }
+}
+
+/* vertical tablet */
+@media (min-width: 500px) and (orientation:portrait) { 
+    svg {
+        height: 85dvh;
+        width: auto;
+    }
+
+    button {
+        margin: 0px 8px 8px 0px;
+    }
+
+    .buttonBox {
+        flex-direction: column;
     }
 }
