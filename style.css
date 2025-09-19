@@ -138,8 +138,8 @@ svg {
 /* vertical tablet */
 @media (min-width: 500px) and (orientation:portrait) { 
     svg {
-        height: 85dvh;
-        width: auto;
+        width: 90vh;
+        height: auto;
     }
 
     button {
